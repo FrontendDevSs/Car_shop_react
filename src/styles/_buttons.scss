@@ -1,0 +1,3 @@
+.button-primary {
+  @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+}
