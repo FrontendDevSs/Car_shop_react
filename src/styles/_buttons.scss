@@ -1,3 +1,16 @@
+@import "./mixins";
+@import "./variables";
+
+
 .button-primary {
   @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
 }
+
+.button-secondary {
+  @include btn(red, $color-white, 12px, green);
+}
+
+.button-tertiary {
+  @include btn(yellow, $color-white, 12px, $color-blue-medium);
+}
+
