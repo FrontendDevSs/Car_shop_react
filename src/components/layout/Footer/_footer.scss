@@ -1,0 +1,37 @@
+@import "../../../styles/mixins";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 120px;
+  border-top: 1px solid #eaeaea;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+
+  p {
+    font-size: 18px;
+  }
+
+  ul {
+    display: flex;
+    gap: 24px;
+  }
+
+  @include mobile {
+    align-items: center;
+    padding: 36px;
+    justify-content: center;
+
+    p {
+      font-size: 15px;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}

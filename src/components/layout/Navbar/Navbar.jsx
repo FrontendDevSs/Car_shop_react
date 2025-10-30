@@ -1,4 +1,5 @@
 import shopingCartIcon from "/assets/shopingCart.png";
+import { Link } from "react-router-dom";
 import menuIcon from "/assets/menu.png";
 import "./_navbar.scss";
 
@@ -7,13 +8,13 @@ function Navbar() {
         <div className="navbar">
             <h1>CAR SHOP</h1>
             <ul>
-                <li>Home</li>
-                <li>Shop</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><Link to ="/">Home</Link></li>
+                <li><Link to ="/shop">Shop</Link></li>
+                <li><Link to ="/about">About</Link></li>
+                <li><Link to ="/contact">Contact</Link></li>
             </ul>
             <div className="icon-div">
-                <img className="cart-img" src={shopingCartIcon} alt="Cart-Icon" />
+                <Link to ="/cart"><img className="cart-img" src={shopingCartIcon} alt="Cart-Icon" /></Link>
                 <img className="menu-img" src={menuIcon} alt="Menu-Icon" />
             </div>
 
@@ -21,6 +22,3 @@ function Navbar() {
     );
 }
 export default Navbar;
-
-//functionalities for burger menu to be added next
-//routing to be added at the end

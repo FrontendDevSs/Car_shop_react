@@ -1,25 +1,25 @@
-<<<<<<< HEAD
-import Navbar from "./components/layout/Navbar"
-=======
-import Button from "./components/ui/button/Button"
+import Navbar from "./components/layout/Navbar/Navbar"
 import Home from "./pages/Home/Home"
-
->>>>>>> 8ca03e2094cec31ebc0afea98228b01d538e334f
+import Shop from "./pages/Shop";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import Footer from "./components/layout/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-<<<<<<< HEAD
-        <>
+        <BrowserRouter>
             <Navbar />
-        </>
-=======
-    <>
-    <h1>Hello there!</h1>
-    <Home />
-    
-    
-    </>
->>>>>>> 8ca03e2094cec31ebc0afea98228b01d538e334f
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/shop" element={<Shop />}></Route>
+                <Route path="/about" element={<About />}></Route>
+                <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/cart" element={<Cart />}></Route>
+            </Routes>
+            <Footer />
+        </BrowserRouter>
     )
 }
 
