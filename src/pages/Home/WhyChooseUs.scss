@@ -1,0 +1,51 @@
+@import "../../styles/main.scss";
+@import "../../styles/variables";
+
+.features-title {
+  font-size: 2.5rem;
+  margin-top: 115px;
+  margin-bottom: 26px;
+}
+.features-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 46px;
+  margin-top: 72px;
+  background-color: $color-blue-light;
+  margin-inline: 110px;
+  border-radius: 16px;
+}
+
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 78px;
+
+  img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 39px;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+
+  p {
+    text-align: left;
+    font-size: 0.9375rem;
+    max-width: 311.5px;
+    max-height: 55px;
+    line-height: 27px;
+  }
+}

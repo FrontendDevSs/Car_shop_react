@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-import Navbar from "./components/layout/Navbar"
-=======
-import Button from "./components/ui/button/Button"
-import Home from "./pages/Home/Home"
-
->>>>>>> 8ca03e2094cec31ebc0afea98228b01d538e334f
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
-    return (
-<<<<<<< HEAD
-        <>
-            <Navbar />
-        </>
-=======
+  return (
     <>
-    <h1>Hello there!</h1>
-    <Home />
-    
-    
+      <HomePage />
     </>
->>>>>>> 8ca03e2094cec31ebc0afea98228b01d538e334f
-    )
+  );
 }
 
-export default App
+export default App;
