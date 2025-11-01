@@ -1,23 +1,33 @@
-@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    gap: $gap;
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $direction: row,
+  $wrap: nowrap,
+  $gap: 0
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
 }
 
-@mixin btn($bg-color: $color-blue-medium, $text-color: $color-white, $radius: 12px, $border-color: transparent) {
-    background-color: $bg-color;
-    color: $text-color;
-    border: 1px solid $border-color;
-    border-radius: $radius;
-    cursor: pointer;
-    transition: all 0.25s ease-in-out;
+@mixin btn(
+  $bg-color: $color-blue-medium,
+  $text-color: $color-white,
+  $radius: 12px,
+  $border-color: transparent
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 
 //* &:hover and &:active - WIP
-
 
 @mixin mobile {
   @media (max-width: 576px) {

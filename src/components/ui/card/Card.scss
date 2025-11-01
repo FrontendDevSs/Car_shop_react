@@ -1,0 +1,101 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/reset";
+
+.card {
+  @include flex(center, center, column, nowrap, 0);
+  width: 100%;
+  max-width: 328px;
+  border-radius: 1rem;
+  border: none;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__content {
+  background-color: $color-blue-light;
+  @include flex(center, center, column, nowrap, 0);
+  padding: 18px 30px;
+  width: 100%;
+}
+
+.card__header {
+  @include flex(center, flex-start, column, nowrap, 5px);
+  width: 100%;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+}
+
+.card__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 16px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  min-width: 0;
+}
+
+.card__details {
+  width: 100%;
+  @include flex(space-between, center, row, nowrap, 0);
+  border-block: 1px solid $color-primary;
+  padding-block: 16px;
+}
+
+.card__detail {
+  @include flex(center, center, column, nowrap, 10px);
+}
+
+.card__detail-value {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  width: 100%;
+  margin-top: 16px;
+  @include flex(space-between, center, row, nowrap, 0);
+}
+
+.card__price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.card__link {
+  cursor: pointer;
+}
+
+.card__link-content {
+  @include flex(center, center, row, nowrap, 10px);
+}
+
+.card__link-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27.5px;
+}
+
+@include mobile {
+  .card {
+    width: 90%;
+    max-width: 328px;
+  }
+}
