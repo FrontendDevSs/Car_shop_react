@@ -1,6 +1,39 @@
 import axios from "axios";
-import { BACKEND_URL } from "../config";
 import { useState, useEffect } from "react";
 
-// Response: (200 OK)
-// Errors: 500 — Failed to fetch cars
+
+
+const useFetch = (url) => {
+
+    const [data, setData] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
+
+    async function fetchData(url) {
+        setLoading(true)
+        setError(false)
+        try {
+            const {data} = await axios(url)
+            setData(data)
+        } catch (err) {
+            setError(true)
+            console.error(err);
+        } finally {
+            setLoading(false)
+        }
+
+    }
+
+
+    useEffect(()=> {
+        if (!url) {
+            console.warn('No url has been attributed')
+            return;
+        }
+        fetchData(url)
+    }, [url])
+
+  return {data, loading, error}
+}
+
+export default useFetch
