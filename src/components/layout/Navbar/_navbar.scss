@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@import "../../../styles/mixins";
 
 .navbar {
   display: flex;
@@ -20,7 +20,8 @@
   }
    .icon-div {
     display: flex;
-    align-items: center; //?
+    align-items: center;
+    gap:17px;
   }
   .cart-img {
     width: 30px;
@@ -57,11 +58,9 @@
         display: block;
         width: 26px;
         height: 26px;
-    
     }
  }
 }
 
-//fix icon alignment on mobile version 
 
 
