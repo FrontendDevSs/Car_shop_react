@@ -1,7 +1,7 @@
-import "./_footer.scss";
+import "./footer.scss";
 
 function Footer() {
-    return(
+    return (
         <footer className="footer">
             <p>© 2024 exemple.com. All rights reserved.</p>
             <ul>
