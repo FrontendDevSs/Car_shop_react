@@ -51,7 +51,7 @@
 
 .card__details {
   width: 100%;
-  @include flex(space-between, center, row, nowrap, 0);
+  @include flex(flex-start, center, row, wrap, 16px);
   border-block: 1px solid $color-primary;
   padding-block: 16px;
 }

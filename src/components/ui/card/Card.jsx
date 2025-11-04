@@ -3,7 +3,6 @@ import getCarDetails from "../../../utils/getCarDetails";
 import arrow from "../../../assets/icons/arrow.svg";
 import "./Card.scss";
 
-
 const Card = ({ car }) => {
   const carDetails = getCarDetails(car);
 
@@ -35,7 +34,7 @@ const Card = ({ car }) => {
             </div>
             <div className="card__footer">
               <p className="card__price">${car.price.toLocaleString()}</p>
-              <Link to={`/cars/${car._id}`} className="card__link">
+              <Link to={`/shop/${car._id}`} className="card__link">
                 <div className="card__link-content">
                   <p className="card__link-text">View Details</p>
                   <img className="card__arrow" src={arrow} alt="arrow" />
