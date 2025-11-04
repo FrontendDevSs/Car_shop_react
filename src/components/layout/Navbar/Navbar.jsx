@@ -1,34 +1,34 @@
 import shopingCartIcon from "/assets/shopingCart.png";
 import { Link } from "react-router-dom";
 import menuIcon from "/assets/menu.png";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import closeIcon from "/assets/close.png";
 import "./_navbar.scss";
 
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <div className="navbar">
-            <h1>CAR SHOP</h1>
-            <ul>
-                <li><Link to ="/">Home</Link></li>
-                <li><Link to ="/shop">Shop</Link></li>
-                <li><Link to ="/about">About</Link></li>
-                <li><Link to ="/contact">Contact</Link></li>
-            </ul>
+  return (
+    <div className="navbar">
+      <h1>CAR SHOP</h1>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/shop">Shop</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
 
-            <div className="icon-div">
-                <Link to ="/cart">{!isOpen && <img className="cart-img" src={shopingCartIcon} alt="Cart-Icon" />}</Link>
-                <button
-                    className="menu-btn"
-                    onClick={() => setIsOpen(true)}
-                    aria-label="open menu">
-                    {!isOpen && <img className="menu-img" src={menuIcon} alt="Menu-Icon" />}
-                </button>
-            </div>
-             <aside className={`drawer ${isOpen ? "open" : ""}`}>
+      <div className="icon-div">
+        <Link to="/cart">{!isOpen && <img className="cart-img" src={shopingCartIcon} alt="Cart-Icon" />}</Link>
+        <button
+          className="menu-btn"
+          onClick={() => setIsOpen(true)}
+          aria-label="open menu">
+          {!isOpen && <img className="menu-img" src={menuIcon} alt="Menu-Icon" />}
+        </button>
+      </div>
+      <aside className={`drawer ${isOpen ? "open" : ""}`}>
         <button
           className="close-btn"
           onClick={() => setIsOpen(false)}
@@ -43,7 +43,7 @@ function Navbar() {
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </nav>
       </aside>
-        </div>
-    );
+    </div>
+  );
 }
 export default Navbar;
