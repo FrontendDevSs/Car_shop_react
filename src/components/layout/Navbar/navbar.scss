@@ -1,0 +1,143 @@
+@import "../../../styles/mixins";
+
+navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 120px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+
+
+  h1 {
+    font-size: 20px;
+  }
+
+  ul {
+    display: flex;
+    gap: 40px;
+
+    li {
+      padding: 16px 8px;
+    }
+  }
+
+  .icon-div {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  .cart-img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+
+  .menu-btn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-img {
+    display: none;
+  }
+
+  .drawer {
+    display: none;
+  }
+
+  @include tablet {
+    padding: 24px 32px;
+    gap: 16px;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    ul {
+      gap: 24px;
+    }
+
+    .cart-img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .drawer {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 16px;
+
+    ul {
+      display: none;
+    }
+
+    .menu-img {
+      display: block;
+      width: 26px;
+      height: 26px;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      background: white;
+      right: 0;
+      height: 90vh;
+      width: 200px;
+      max-width: 80%;
+      border-left: 1px solid #eaeaea;
+      box-shadow: -8px 0 24px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+
+    }
+
+    .drawer.open {
+      transform: translateX(0);
+    }
+
+    .close-btn {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      line-height: 0;
+      cursor: pointer;
+      align-self: flex-end;
+      margin-bottom: 24px;
+
+      .close-img {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+      }
+    }
+  }
+}

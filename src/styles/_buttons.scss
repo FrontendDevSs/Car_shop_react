@@ -1,16 +1,26 @@
 @import "./mixins";
 @import "./variables";
 
-
 .button-primary {
   @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+
+  height: 60px;
+  width: 160px;
+  font-weight: 700;
 }
 
 .button-secondary {
-  @include btn(red, $color-white, 12px, green);
+  @include btn($color-white, $color-blue-medium, 12px);
+
+  height: 60px;
+  width: 160px;
+  border: 1px solid $color-blue-medium;
+  font-weight: 700;
 }
 
 .button-tertiary {
-  @include btn(yellow, $color-white, 12px, $color-blue-medium);
+  @include btn($color-dark, $color-white, 12px);
+  height: 60px;
+  width: 160px;
+  font-weight: 700;
 }
-

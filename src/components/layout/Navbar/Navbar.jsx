@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import menuIcon from "/assets/menu.png";
 import { useState, useEffect } from "react";
 import closeIcon from "/assets/close.png";
-import "./_navbar.scss";
+import "./navbar.scss";
 
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="navbar">
+    <navbar>
       <h1>CAR SHOP</h1>
       <ul>
         <li><Link to="/">Home</Link></li>
@@ -43,7 +43,7 @@ function Navbar() {
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </nav>
       </aside>
-    </div>
+    </navbar>
   );
 }
 export default Navbar;
