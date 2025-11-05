@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/reset";
+
+.shop {
+    padding: 48px 0 72px;
+
+    .shop-div {
+        max-width: 1280px;
+        margin-inline: auto;
+        padding-inline: 24px;
+
+        .shop-title {
+            font-weight: 800;
+            font-size: clamp(28px, 3.2vw, 40px);
+            line-height: 1.1;
+            text-align: center;
+            color: #0f172a;
+            margin: 8px 0 28px;
+        }
+
+        .shop-status {
+            text-align: center;
+            color: #475569;
+        }
+
+        .shop-error {
+            color: #ef4444;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+    }
+
+    @include tablet {
+        .shop-div .shop-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+    }
+
+    @include mobile {
+        .shop-div .shop-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-items: center;
+        }
+    }
+}
