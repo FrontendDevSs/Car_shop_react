@@ -1,7 +1,7 @@
 import shopingCartIcon from "../../../assets/icons/shopingCart.png";
 import { Link } from "react-router-dom";
 import menuIcon from "../../../assets/icons/menu.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import closeIcon from "../../../assets/icons/close.png";
 import "./navbar.scss";
 
