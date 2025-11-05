@@ -1,6 +1,6 @@
 import Navbar from "./components/layout/Navbar/Navbar";
 import HomePage from "./pages/Home/HomePage";
-import Shop from "./pages/Shop";
+import Shop from "./pages/Shop/Shop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";

@@ -9,7 +9,7 @@ const HomePage = () => {
     <div>
       <HeroSection />
       <OurFeatures />
-      <TopCars></TopCars>
+      <TopCars />
       <WhyChooseUs />
       <Newsletter />
     </div>

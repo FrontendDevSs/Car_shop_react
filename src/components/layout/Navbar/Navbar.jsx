@@ -1,15 +1,15 @@
 import shopingCartIcon from "../../../assets/icons/shopingCart.png";
 import { Link } from "react-router-dom";
 import menuIcon from "../../../assets/icons/menu.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import closeIcon from "../../../assets/icons/close.png";
-import "./_navbar.scss";
+import "./navbar.scss";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="navbar">
+    <navbar>
       <h1>CAR SHOP</h1>
       <ul>
         <li>
@@ -62,7 +62,7 @@ function Navbar() {
           </Link>
         </nav>
       </aside>
-    </div>
+    </navbar>
   );
 }
 export default Navbar;
