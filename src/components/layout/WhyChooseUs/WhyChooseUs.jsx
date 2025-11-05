@@ -1,9 +1,9 @@
 import "./WhyChooseUs.scss";
 
-import whyChooseUsImg1 from "../../../assets/whyChooseUsImg1.svg";
-import whyChooseUsImg2 from "../../../assets/whyChooseUsImg2.png";
-import whyChooseUsImg3 from "../../../assets/whyChooseUsImg3.png";
-import whyChooseUsImg4 from "../../../assets/whyChooseUsImg4.png";
+import whyChooseUsImg1 from "../../../assets/icons/whyChooseUsImg1.svg";
+import whyChooseUsImg2 from "../../../assets/icons/whyChooseUsImg2.png";
+import whyChooseUsImg3 from "../../../assets/icons/whyChooseUsImg3.png";
+import whyChooseUsImg4 from "../../../assets/icons/whyChooseUsImg4.png";
 
 const WhyChooseUs = () => {
   return (
