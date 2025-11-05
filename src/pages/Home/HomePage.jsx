@@ -1,14 +1,15 @@
-import Navbar from "../../components/layout/Navbar/Navbar";
-import HeroSection from "../../pages/Home/HeroSection";
-import OurFeatures from "./OurFeatures";
-import WhyChooseUs from "./WhyChooseUs";
-import Newsletter from "./Newsletter";
+import HeroSection from "../../components/layout/HeroSection/HeroSection";
+import OurFeatures from "../../components/layout/OurFeatures/OurFeatures";
+import WhyChooseUs from "../../components/layout/WhyChooseUs/WhyChooseUs";
+import Newsletter from "../../components/layout/Newsletter/Newsletter";
+import TopCars from "../../components/layout/TopCars/TopCars";
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
       <OurFeatures />
+      <TopCars />
       <WhyChooseUs />
       <Newsletter />
     </div>

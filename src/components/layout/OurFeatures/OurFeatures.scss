@@ -1,0 +1,182 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+h2 {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 45px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.875rem;
+  width: 233.5px;
+}
+
+p {
+  width: 400px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  line-height: 28px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 59px;
+  padding-inline: 260px;
+}
+
+.left-wrapper,
+.right-wrapper {
+  flex: 1;
+  border-radius: 16px;
+  padding: 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-wrapper img,
+.right-wrapper img {
+  align-self: flex-end;
+}
+
+.left-wrapper {
+  background-color: $color-blue-normal;
+}
+
+.right-wrapper {
+  background-color: $color-pink-light;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60px;
+  width: 160px;
+  font-weight: 700;
+}
+
+.button img {
+  height: 14px;
+  width: 14px;
+  align-self: center;
+}
+
+.button-primary {
+  @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+}
+
+.button-tertiary {
+  @include btn($color-dark, $color-white, 12px);
+}
+@include tablet {
+  .wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 20px;
+  }
+
+  .left-wrapper,
+  .right-wrapper {
+    padding: 40px 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 80px 0;
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  p {
+    width: 100%;
+    max-width: 400px;
+    margin: 14px auto;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
+  .button .button-image {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .left-wrapper img,
+  .right-wrapper img {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  h2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  h3 {
+    max-width: 250px;
+    line-height: 45px;
+  }
+
+  .left-wrapper,
+  .right-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-wrapper img,
+  .right-wrapper img {
+    align-self: center;
+    margin-top: 40px;
+    height: 80px;
+  }
+
+  p {
+    margin: 10px auto;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 160px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .button img {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    align-self: center;
+  }
+}

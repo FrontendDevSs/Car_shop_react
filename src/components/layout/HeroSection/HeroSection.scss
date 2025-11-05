@@ -1,0 +1,95 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: $color-blue-light;
+
+  p {
+    margin-top: 115px;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 72px;
+    margin-bottom: 30px;
+  }
+  .button-primary {
+    @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+    height: 60px;
+    width: 160px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .button-secondary {
+    @include btn($color-white, $color-blue-medium, 12px);
+    height: 60px;
+    width: 160px;
+    border: 1px solid $color-blue-medium;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .button-primary .btn-img,
+  .button-secondary .btn-img {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@include tablet {
+  .home-container {
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      margin-top: 80px;
+    }
+
+    .buttons {
+      margin-top: 80px;
+    }
+  }
+}
+
+@include mobile {
+  .home-container {
+    h1 {
+      font-size: 2.8125rem;
+    }
+
+    p {
+      margin-top: 60px;
+    }
+
+    .buttons {
+      flex-direction: row;
+      gap: 6px;
+      margin-top: 36px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      width: 160px;
+      height: 46px;
+      margin-bottom: 50px;
+    }
+  }
+}
