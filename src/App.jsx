@@ -1,8 +1,8 @@
 import Navbar from "./components/layout/Navbar/Navbar";
 import HomePage from "./pages/Home/HomePage";
 import Shop from "./pages/Shop/Shop";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart";
 import Footer from "./components/layout/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
