@@ -1,6 +1,6 @@
 @import "../../../styles/mixins";
 
-navbar {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +20,7 @@ navbar {
     li {
       padding: 16px 8px;
     }
+
   }
 
   .icon-div {
