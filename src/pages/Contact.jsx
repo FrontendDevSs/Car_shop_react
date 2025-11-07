@@ -1,6 +1,8 @@
+import CarDetails from "./carDetails/CarDetails"
+
 function Contact() {
     return(
-        <h1>Contact Page</h1>
+        <CarDetails />
     )
 }
 

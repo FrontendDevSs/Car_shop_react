@@ -1,7 +1,19 @@
+import { BACKEND_URL } from "../config";
+import useFetch from "../hooks/useFetch";
+import Card from "../components/ui/card/Card";
+
 function Shop() {
-    return(
-        <h1>Shop Page</h1>
-    )
+  const { data: cars, loading, error } = useFetch(BACKEND_URL);
+  const shopCars = cars?.slice(0, 12);
+  console.log(shopCars);
+
+  return (
+    <>
+      {!loading &&
+        !error &&
+        shopCars?.map((car) => <Card key={car._id} car={car} />)}
+    </>
+  );
 }
 
-export default Shop
+export default Shop;

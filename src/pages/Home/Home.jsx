@@ -1,11 +1,12 @@
-import Button from "../../components/ui/button/Button";
+
+import TopCars from "../Home/TopCars"
 
 const Home = () => {
   return (
     <div>
-      <Button dynamicClass={"button-primary"}>Pozdrav</Button>
-      <Button dynamicClass={"button-secondary"}>Cao</Button>
-      <Button dynamicClass={"button-tertiary"}>Pozdrav</Button>
+      
+      <TopCars />
+      
     </div>
   );
 };

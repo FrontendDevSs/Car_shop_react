@@ -8,7 +8,7 @@ const TopCars = () => {
 
   return (
     <>
-      <section>
+      <section >
         <h2>Top rated Cars</h2>
         <div>
           {loading && <p>Loading...</p>}
