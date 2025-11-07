@@ -1,5 +1,5 @@
 import shopingCartIcon from "../../../assets/icons/shopingCart.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import menuIcon from "../../../assets/icons/menu.png";
 import { useState } from "react";
 import closeIcon from "../../../assets/icons/close.png";
