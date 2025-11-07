@@ -7,11 +7,11 @@ import whiteArrow from "../../../assets/icons/whiteArrow.png";
 const OurFeatures = () => {
   return (
     <>
-      <h2>Our Features</h2>
+      <h2 className="wrapper-title">Our Features</h2>
       <div className="wrapper">
         <div className="left-wrapper">
-          <h3>Are You Looking For a Car ?</h3>
-          <p>
+          <h3 className="wrapper-subtitle">Are You Looking For a Car ?</h3>
+          <p className="wrapper-text">
             We are committed to providing our customers with exceptional
             service.
           </p>
@@ -22,8 +22,8 @@ const OurFeatures = () => {
           <img src={electricCar} alt="Electric Car" />
         </div>
         <div className="right-wrapper">
-          <h3>Do You Want to Sell a Car ?</h3>
-          <p>
+          <h3 className="wrapper-subtitle">Do You Want to Sell a Car ?</h3>
+          <p className="wrapper-text">
             We are committed to providing our customers with exceptional
             service.
           </p>

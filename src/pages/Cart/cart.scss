@@ -1,0 +1,121 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.cart-title {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 6rem;
+  line-height: 70px;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-empty-text {
+  margin-top: 350px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 44px;
+  white-space: nowrap;
+}
+
+.cart-button {
+  @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+  height: 60px;
+  width: 160px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 546px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding: 0 245px;
+  margin-top: 120px;
+  gap: 30px;
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid $color-gray-light;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    .cart-item-image {
+      max-width: 188px;
+      max-height: 99px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 20px;
+    }
+    .remove-btn {
+      margin-right: 54px;
+    }
+    .cart-item-qty {
+      margin-right: 165px;
+      font-weight: 600;
+    }
+
+    .cart-item-price {
+      margin-right: 90px;
+    }
+
+    .cart-item-info {
+      flex: 1;
+      margin-left: 42px;
+
+      .cart-item-title {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 40px;
+  padding: 20px;
+
+  .cart-summary-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-summary-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cart-summary-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .cart-button {
+    @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
+    padding: 15px 30px;
+    font-weight: 700;
+    width: 222px;
+    white-space: nowrap;
+    margin-bottom: 161px;
+  }
+}

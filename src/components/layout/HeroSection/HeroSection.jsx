@@ -7,19 +7,23 @@ import whiteArrow from "../../../assets/icons/whiteArrow.png";
 const HeroSection = () => {
   return (
     <div className="home-container">
-      <p>Find cars for sale and for rent near you</p>
-      <h1>Find Your Dream Car</h1>
-      <div className="buttons">
-        <Link to="/shop" className="button-primary">
+      <p className="home-subtitle">Find cars for sale and for rent near you</p>
+      <h1 className="home-title">Find Your Dream Car</h1>
+      <div className="home-buttons">
+        <Link to="/shop" className="home-button-primary">
           Shop now{" "}
-          <img className="btn-img" src={whiteArrow} alt="Arrow for Shop" />
+          <img className="home-btn-img" src={whiteArrow} alt="Arrow for Shop" />
         </Link>
-        <Link to="/contact" className="button-secondary">
+        <Link to="/contact" className="home-button-secondary">
           Contact us{" "}
-          <img className="btn-img" src={blueArrow} alt="Arrow for Contact" />
+          <img
+            className="home-btn-img"
+            src={blueArrow}
+            alt="Arrow for Contact"
+          />
         </Link>
       </div>
-      <img src={heroImage} alt="Hero Section Image" />
+      <img className="home-hero-img" src={heroImage} alt="Hero Section Image" />
     </div>
   );
 };

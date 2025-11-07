@@ -7,45 +7,43 @@ import whyChooseUsImg4 from "../../../assets/icons/whyChooseUsImg4.png";
 
 const WhyChooseUs = () => {
   return (
-    <>
-      <div className="features-wrapper">
-        <h1 className="features-title">Why Choose Us?</h1>
-        <div className="features-section">
-          <div className="feature-item">
-            <img src={whyChooseUsImg1} alt="" />
-            <h4>Special Financing Offers</h4>
-            <p>
-              Our stress-free finance department that can find financial
-              solutions to save you money.
-            </p>
-          </div>
-          <div className="feature-item">
-            <img src={whyChooseUsImg2} alt="" />
-            <h4>Special Financing Offers</h4>
-            <p>
-              Our stress-free finance department that can find financial
-              solutions to save you money.
-            </p>
-          </div>{" "}
-          <div className="feature-item">
-            <img src={whyChooseUsImg3} alt="" />
-            <h4>Special Financing Offers</h4>
-            <p>
-              Our stress-free finance department that can find financial
-              solutions to save you money.
-            </p>
-          </div>{" "}
-          <div className="feature-item">
-            <img src={whyChooseUsImg4} alt="" />
-            <h4>Special Financing Offers</h4>
-            <p>
-              Our stress-free finance department that can find financial
-              solutions to save you money.
-            </p>
-          </div>
+    <section className="why-choose-us">
+      <h2 className="why-choose-us-title">Why Choose Us?</h2>
+      <div className="why-choose-us-items">
+        <div className="why-choose-us-item">
+          <img src={whyChooseUsImg1} alt="Special Financing Offers" />
+          <h4 className="why-choose-us-item-title">Special Financing Offers</h4>
+          <p className="why-choose-us-item-desc">
+            Our stress-free finance department can find financial solutions to
+            save you money.
+          </p>
+        </div>
+        <div className="why-choose-us-item">
+          <img src={whyChooseUsImg2} alt="Trusted Dealer" />
+          <h4 className="why-choose-us-item-title">Trusted Dealer</h4>
+          <p className="why-choose-us-item-desc">
+            Our stress-free finance department can find financial solutions to
+            save you money.
+          </p>
+        </div>
+        <div className="why-choose-us-item">
+          <img src={whyChooseUsImg3} alt="Wide Selection" />
+          <h4 className="why-choose-us-item-title">Wide Selection</h4>
+          <p className="why-choose-us-item-desc">
+            Our stress-free finance department can find financial solutions to
+            save you money.
+          </p>
+        </div>
+        <div className="why-choose-us-item">
+          <img src={whyChooseUsImg4} alt="Customer Support" />
+          <h4 className="why-choose-us-item-title">Customer Support</h4>
+          <p className="why-choose-us-item-desc">
+            Our stress-free finance department can find financial solutions to
+            save you money.
+          </p>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
