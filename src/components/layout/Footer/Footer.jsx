@@ -3,7 +3,7 @@ import "./footer.scss";
 function Footer() {
     return (
         <footer className="footer">
-            <p>© 2024 exemple.com. All rights reserved.</p>
+            <p>© 2024 example.com. All rights reserved.</p>
             <ul>
                 <li>Tearms & Conditions</li>
                 <span>•</span>

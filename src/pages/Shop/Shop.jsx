@@ -1,4 +1,6 @@
 import "./shop.scss";
+import WhyChoseUs from "../../components/layout/WhyChooseUs/WhyChooseUs"
+import Newsletter from "../../components/layout/Newsletter/Newsletter"
 
 import { BACKEND_URL } from "../../config";
 import useFetch from "../../hooks/useFetch";
@@ -25,6 +27,8 @@ function Shop() {
                     </div>
                 )}
             </div>
+            <WhyChoseUs />
+            <Newsletter />
         </section>
     );
 }

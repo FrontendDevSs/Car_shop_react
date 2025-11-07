@@ -9,9 +9,9 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <navbar>
+    <nav>
       <h1>CAR SHOP</h1>
-      <ul>
+      <ul >
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -62,7 +62,7 @@ function Navbar() {
           </Link>
         </nav>
       </aside>
-    </navbar>
+    </nav>
   );
 }
 export default Navbar;
