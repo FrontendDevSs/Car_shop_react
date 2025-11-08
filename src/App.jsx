@@ -1,11 +1,11 @@
 import Navbar from "./components/layout/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Shop from "./pages/Shop";
-import CarDetails from "./pages/carDetails/CarDetails";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import HomePage from "./pages/Home/HomePage";
+import Shop from "./pages/Shop/Shop";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart";
 import Footer from "./components/layout/Footer/Footer";
+import CarDetails from "./pages/CarDetails/CarDetails"
 import { BrowserRouter, Routes, Route } from "react-router";
 
 function App() {
@@ -13,14 +13,14 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/shop" element={<Shop />}></Route>
-        <Route path="/shop/:id" element={<CarDetails />}/>
+        <Route path="/shop/:id" element={<CarDetails />} />
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 }

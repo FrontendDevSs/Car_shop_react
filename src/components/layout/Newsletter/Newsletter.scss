@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.newsletter-title {
+  margin-top: 176px;
+  font-size: 1.875rem;
+  margin-bottom: 9px;
+}
+
+.newsletter-text {
+  margin-bottom: 32px;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.newsletter {
+  .newsletter-form {
+    display: flex;
+    justify-content: space-between;
+    width: 567px;
+    height: 74px;
+    border: 1px solid $color-gray-light;
+    margin-bottom: 121px;
+    border-radius: 12px;
+  }
+
+  input {
+    margin-left: 20px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+  }
+  .newsletter-button {
+    @include btn($color-blue-medium, $color-white, 8px, $color-blue-medium);
+    padding: 0 20px;
+    width: 115px;
+    height: 52px;
+    align-self: center;
+    margin-right: 11px;
+  }
+
+  .btn-up {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-blue-medium;
+    right: 110px;
+    top: 82px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+
+@include tablet {
+  .newsletter {
+    .newsletter-form {
+      margin-bottom: 80px;
+    }
+
+    .newsletter-title {
+      text-align: center;
+    }
+
+    .btn-up {
+      right: 40px;
+      top: 60px;
+    }
+  }
+}
+@include mobile {
+  .newsletter {
+    .newsletter-form {
+      width: 80%;
+      margin-bottom: 55px;
+    }
+    .newsletter-title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-text {
+      margin-bottom: 20px;
+    }
+
+    .newsletter-button {
+      margin-bottom: 15px;
+      margin-left: 12px;
+    }
+  }
+}
