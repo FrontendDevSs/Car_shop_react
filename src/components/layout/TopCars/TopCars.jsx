@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import useFetch from "../../../hooks/useFetch";
 import { BACKEND_URL } from "../../../config";
 import Card from "../../ui/card/Card";
