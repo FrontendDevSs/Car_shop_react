@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./HeroSection.scss";
 import heroImage from "../../../assets/icons/homeImg.svg";
 import blueArrow from "../../../assets/icons/blueArrow.png";

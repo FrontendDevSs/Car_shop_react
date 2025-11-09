@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./OurFeatures.scss";
 import electricCar from "../../../assets/icons/electricCar.svg";
 import electricCar2 from "../../../assets/icons/electricCar2.svg";
@@ -34,7 +34,7 @@ const OurFeatures = () => {
           <img src={electricCar2} alt="Electric Car" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
