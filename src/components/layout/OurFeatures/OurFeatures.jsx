@@ -34,7 +34,7 @@ const OurFeatures = () => {
           <img src={electricCar2} alt="Electric Car" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

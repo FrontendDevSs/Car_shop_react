@@ -3,13 +3,14 @@ import { BACKEND_URL } from "../../config";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router";
 import "./carDetails.scss";
-import { useQuantityStore, useCartStore } from "../../store/useStore";
+import { useQuantityStore } from "../../store/useStore";
+import { useCartStore } from "../Cart/CartStore";
 
 const CarDetails = () => {
   const { id } = useParams();
   const { data: car, loading, error } = useFetch(`${BACKEND_URL}/${id}`);
   const { quantity, incrementQuantity, decrementQuantity } = useQuantityStore();
-  const { addToCart } = useCartStore();
+  const addToCart = useCartStore((state) => state.addToCart);
 
   return (
     <>
@@ -60,7 +61,7 @@ const CarDetails = () => {
                     </button>
                   </div>
                   <button
-                    onClick={() => addToCart(car)}
+                    onClick={() => addToCart(car, quantity)}
                     className="car-to-cart button-primary"
                   >
                     Add to cart

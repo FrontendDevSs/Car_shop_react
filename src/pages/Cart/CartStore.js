@@ -5,67 +5,37 @@ import contactImg from "../../assets/icons/contactImg.png";
 export const useCartStore = create(
   persist(
     (set) => ({
-      cart: [
-        {
-          id: 1,
-          title: "Test Car",
-          description: "This is a test car",
-          image: contactImg,
-          price: 20000,
-          qty: 1,
-        },
-        {
-          id: 2,
-          title: "Test Car",
-          description: "This is a test car",
-          image: contactImg,
-          price: 20000,
-          qty: 1,
-        },
-        {
-          id: 3,
-          title: "Test Car",
-          description: "This is a test car",
-          image: contactImg,
-          price: 20000,
-          qty: 1,
-        },
-        {
-          id: 4,
-          title: "Test Car",
-          description: "This is a test car",
-          image: contactImg,
-          price: 20000,
-          qty: 1,
-        },
-      ],
+      cart: [],
 
-      addToCart: (car) =>
+      addToCart: (car, quantity) =>
         set((state) => {
           const exists = state.cart.find(
-            (carInCart) => carInCart.id === car.id
+            (carInCart) => carInCart._id === car._id
           );
+
           if (exists) {
             return {
               cart: state.cart.map((carInCart) =>
-                carInCart.id === car.id
-                  ? { ...carInCart, qty: carInCart.qty + 1 }
+                carInCart._id === car._id
+                  ? { ...carInCart, qty: carInCart.qty + quantity }
                   : carInCart
               ),
             };
           }
-          return { cart: [...state.cart, { ...car, qty: 1 }] };
+
+          console.log({ cart: [...state.cart, { ...car, qty: quantity }] });
+          return { cart: [...state.cart, { ...car, qty: quantity }] };
         }),
 
       removeFromCart: (id) =>
         set((state) => ({
-          cart: state.cart.filter((carInCart) => carInCart.id !== id),
+          cart: state.cart.filter((carInCart) => carInCart._id !== id),
         })),
 
       updateQuantity: (id, qty) =>
         set((state) => ({
           cart: state.cart.map((carInCart) =>
-            carInCart.id === id ? { ...carInCart, qty } : carInCart
+            carInCart._id === id ? { ...carInCart, qty } : carInCart
           ),
         })),
     }),

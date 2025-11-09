@@ -25,23 +25,25 @@ const Cart = () => {
         <>
           <div className="cart-items">
             {cart.map((car) => (
-              <div className="cart-item" key={car.id}>
+              <div className="cart-item" key={car._id}>
                 <img
                   src={car.image}
-                  alt={`Image of ${car.title}`}
+                  alt={`Image of ${car.brand} ${car.model}`}
                   className="cart-item-image"
                 />
                 <div className="cart-item-info">
-                  <h3 className="cart-item-title">{car.title}</h3>
+                  <h3 className="cart-item-title">
+                    {car.brand} {car.model}
+                  </h3>
                   <p className="cart-item-description">
-                    {car.description || "No description available"}
+                    {car.description?.short || "No description available"}
                   </p>
                 </div>
                 <p className="cart-item-qty">X{car.qty}</p>
                 <p className="cart-item-price">${car.price * car.qty}</p>
                 <button
                   className="remove-btn"
-                  onClick={() => removeFromCart(car.id)}
+                  onClick={() => removeFromCart(car._id)}
                 >
                   <img src={TrashCan} alt="Remove item" />
                 </button>
