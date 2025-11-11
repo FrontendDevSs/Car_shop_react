@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCartStore } from "./CartStore";
+import { useCartStore } from "../../hooks/cartStore";
 import "./Cart.scss";
 import WhyChooseUs from "../../components/layout/WhyChooseUs/WhyChooseUs";
 import Newsletter from "../../components/layout/Newsletter/Newsletter";

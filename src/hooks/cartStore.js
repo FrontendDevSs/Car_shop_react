@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import contactImg from "../../assets/icons/contactImg.png";
 
 export const useCartStore = create(
   persist(

@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router";
 import "./carDetails.scss";
 import { useQuantityStore } from "../../store/useStore";
-import { useCartStore } from "../Cart/CartStore";
+import { useCartStore } from "../../hooks/cartStore";
 
 const CarDetails = () => {
   const { id } = useParams();
