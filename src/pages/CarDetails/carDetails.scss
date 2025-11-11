@@ -20,13 +20,13 @@
 
   .car-details-card {
     .car-details-link {
-      font-size: 1rem;
       line-height: 1.5;
       font-weight: 700;
     }
 
     .car-layout {
-      @include flex(space-between, center, row, nowrap, 10%);
+      @include flex(center, space-between);
+      gap: 10%;
       width: 100%;
       margin-top: 64px;
 
@@ -36,13 +36,13 @@
         object-fit: cover;
         object-position: center;
         border-radius: 12px;
-        min-width: 360px;
-        max-width: 800px;
+        width: clamp(360px, 40vw, 800px);
       }
 
       .car-info {
         flex: 0 1 40%;
-        @include flex(center, flex-start, column, nowrap, 0);
+        @include flex(flex-start, center);
+        flex-direction: column;
 
         .car-name {
           font-size: 2.5rem;
@@ -53,7 +53,6 @@
         }
 
         .car-description {
-          font-size: 1rem;
           line-height: 1.5;
           font-weight: 500;
           color: $color-gray-medium;
@@ -65,7 +64,6 @@
           margin-bottom: 4rem;
 
           p {
-            font-size: 1rem;
             line-height: 1.7;
             font-weight: 500;
 
@@ -84,25 +82,23 @@
         }
 
         .car-actions {
-          display: flex;
-          align-items: center;
+          @include flex(center);
           gap: 20px;
 
           .car-quantity {
+            @include flex(center, space-around);
+            gap: 25px;
             background-color: $color-blue-light;
             border-radius: 12px;
             width: 160px;
             padding: 20px;
-            @include flex(space-around, center, row, nowrap, 25px);
 
             .car-quantity-button {
               cursor: pointer;
               font-weight: 700;
-              font-size: 1rem;
             }
 
             p {
-              font-size: 1rem;
               font-weight: 700;
               line-height: 1;
               letter-spacing: 1px;
@@ -115,7 +111,6 @@
             cursor: pointer;
             width: 160px;
             padding: 20px;
-            font-size: 1rem;
             line-height: 1;
             font-weight: 700;
           }

@@ -5,21 +5,74 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart";
 import Footer from "./components/layout/Footer/Footer";
-import CarDetails from "./pages/CarDetails/CarDetails"
-import { BrowserRouter, Routes, Route } from "react-router";
+import CarDetails from "./pages/CarDetails/CarDetails";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
+import { AnimatePresence } from "framer-motion";
+import PageWrapper from "./components/animations/PageWrapper";
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageWrapper>
+              <HomePage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <PageWrapper>
+              <Shop />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/shop/:id"
+          element={
+            <PageWrapper>
+              <CarDetails />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PageWrapper>
+              <About />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageWrapper>
+              <Contact />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <PageWrapper>
+              <Cart />
+            </PageWrapper>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/shop" element={<Shop />}></Route>
-        <Route path="/shop/:id" element={<CarDetails />} />
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-      </Routes>
+      <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
   );
