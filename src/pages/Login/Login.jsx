@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
-import Img from "../../../assets/icons/AuthImg.jpg";
-import ClosedEye from "../../../assets/icons/eye-closed.svg";
-import OpenEye from "../../../assets/icons/eye-open.svg";
+import useAuth from "../../hooks/useAuth";
+import Img from "../../assets/icons/AuthImg.jpg";
+import ClosedEye from "../../assets/icons/eye-closed.svg";
+import OpenEye from "../../assets/icons/eye-open.svg";
 import "./login.scss";
 
 function Login() {
