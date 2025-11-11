@@ -13,7 +13,14 @@ const Cart = () => {
   return (
     <div className="cart-container">
       <h1 className="cart-title">Your Cart</h1>
+      <div className="cart-header">
+        <h4 className="cart-subtitle">Shopping Cart</h4>
 
+        <p className="cart-item-count">
+          You have {cart.length} {cart.length === 1 ? "item" : "items"} in your
+          cart
+        </p>
+      </div>
       {cart.length === 0 ? (
         <div className="cart-empty">
           <p className="cart-empty-text">No items in the cart.</p>
