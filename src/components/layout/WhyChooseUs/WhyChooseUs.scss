@@ -1,12 +1,13 @@
 @import "../../../styles/variables";
 @import "../../../styles/mixins";
 
-.features-title {
+.why-choose-us-title {
   font-size: 2.5rem;
   margin-top: 115px;
   margin-bottom: 26px;
 }
-.features-wrapper {
+
+.why-choose-us {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,14 +18,14 @@
   border-radius: 16px;
 }
 
-.features-section {
+.why-choose-us-items {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
 
-.feature-item {
+.why-choose-us-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,12 +37,12 @@
     margin-bottom: 39px;
   }
 
-  h4 {
+  .why-choose-us-item-title {
     font-size: 1.25rem;
     margin-bottom: 14px;
   }
 
-  p {
+  .why-choose-us-item-desc {
     text-align: left;
     font-size: 0.9375rem;
     max-width: 311.5px;
@@ -51,11 +52,11 @@
 }
 
 @include tablet {
-  .features-section {
+  .why-choose-us-items {
     gap: 20px;
   }
 
-  .feature-item {
+  .why-choose-us-item {
     max-width: 45%;
     align-items: center;
     text-align: center;
@@ -64,30 +65,30 @@
       margin-bottom: 20px;
     }
 
-    p {
+    .why-choose-us-item-desc {
       text-align: center;
       max-width: 100%;
     }
   }
 
-  .features-wrapper {
+  .why-choose-us {
     margin-inline: 20px;
   }
 }
 
 @include mobile {
-  .features-title {
+  .why-choose-us-title {
     font-size: 35px;
     margin-top: 50px;
   }
 
-  .features-wrapper {
+  .why-choose-us {
     width: 100vw;
     margin: 0;
     border-radius: 0;
   }
 
-  .features-section {
+  .why-choose-us-items {
     flex-direction: column;
     align-items: center;
     margin: 0;
@@ -95,7 +96,7 @@
     width: 100%;
   }
 
-  .feature-item {
+  .why-choose-us-item {
     max-width: 100%;
     align-items: center;
     text-align: center;
@@ -107,11 +108,11 @@
       margin-top: -30px;
     }
 
-    h4 {
+    .why-choose-us-item-title {
       font-size: 1.25rem;
     }
 
-    p {
+    .why-choose-us-item-desc {
       max-width: 311.5px;
       font-size: 0.9375rem;
       line-height: 24px;

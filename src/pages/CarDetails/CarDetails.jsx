@@ -10,7 +10,7 @@ const CarDetails = () => {
   const { id } = useParams();
   const { data: car, loading, error } = useFetch(`${BACKEND_URL}/${id}`);
   const { quantity, incrementQuantity, decrementQuantity } = useQuantityStore();
-  const { addToCart } = useCartStore();
+  const addToCart = useCartStore((state) => state.addToCart);
 
   return (
     <>
@@ -70,6 +70,12 @@ const CarDetails = () => {
                       Add to cart
                     </button>
                   </div>
+                  <button
+                    onClick={() => addToCart(car, quantity)}
+                    className="car-to-cart button-primary"
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </FadeInSection>
             </div>
