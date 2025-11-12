@@ -1,16 +1,7 @@
-@mixin flex(
-  $justify: center,
-  $align: center,
-  $direction: row,
-  $wrap: nowrap,
-  $gap: 0
-) {
+@mixin flex($align: stretch, $justify: flex-start) {
   display: flex;
-  justify-content: $justify;
   align-items: $align;
-  flex-direction: $direction;
-  flex-wrap: $wrap;
-  gap: $gap;
+  justify-content: $justify;
 }
 
 @mixin btn(
@@ -25,6 +16,9 @@
   border-radius: $radius;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 //* &:hover and &:active - WIP
