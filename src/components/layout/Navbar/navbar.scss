@@ -1,4 +1,5 @@
 @import "../../../styles/mixins";
+@import "../../../styles/variables";
 
 nav {
   display: flex;
@@ -7,7 +8,6 @@ nav {
   padding: 40px 120px;
   border-bottom: 1px solid #eaeaea;
   background: #fff;
-
 
   h1 {
     font-size: 20px;
@@ -19,8 +19,26 @@ nav {
 
     li {
       padding: 16px 8px;
-    }
 
+      a {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -4px;
+          width: 0;
+          height: 2px;
+          border-radius: 16px;
+          background-color: $color-blue-medium;
+          transition: all 0.3s ease-in-out;
+          transform: translateX(-50%);
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .icon-div {
@@ -106,7 +124,6 @@ nav {
       display: flex;
       flex-direction: column;
       padding: 16px;
-
     }
 
     .drawer.open {

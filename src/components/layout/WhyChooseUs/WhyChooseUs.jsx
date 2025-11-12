@@ -4,10 +4,11 @@ import whyChooseUsImg1 from "../../../assets/icons/whyChooseUsImg1.svg";
 import whyChooseUsImg2 from "../../../assets/icons/whyChooseUsImg2.png";
 import whyChooseUsImg3 from "../../../assets/icons/whyChooseUsImg3.png";
 import whyChooseUsImg4 from "../../../assets/icons/whyChooseUsImg4.png";
+import FadeInSection from "../../animations/FadeInSection";
 
 const WhyChooseUs = () => {
   return (
-    <>
+    <FadeInSection direction="up" once={false}>
       <div className="features-wrapper">
         <h1 className="features-title">Why Choose Us?</h1>
         <div className="features-section">
@@ -45,7 +46,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </FadeInSection>
   );
 };
 
