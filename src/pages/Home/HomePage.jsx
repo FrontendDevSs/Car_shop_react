@@ -6,13 +6,13 @@ import TopCars from "../../components/layout/TopCars/TopCars";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <OurFeatures />
       <TopCars />
       <WhyChooseUs />
       <Newsletter />
-    </div>
+    </>
   );
 };
 

@@ -2,19 +2,23 @@
 @import "../../../styles/variables";
 
 .top-cars-section {
-  text-align: center;
   margin-top: 114px;
+  margin-inline: auto;
+  max-width: 1440px;
 }
 
 .top-cars-title {
+  text-align: center;
   margin-top: 120px;
   margin-bottom: 114px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .top-cars-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(260px, 1fr));
-  padding-inline: 260px;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
   gap: 30px;
   margin: 0 auto;
   width: 100%;
@@ -23,7 +27,7 @@
 .top-cars-button {
   @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -31,6 +35,8 @@
   height: 60px;
   font-weight: 700;
   margin-top: 130px;
+  margin-inline: auto;
+  line-height: 1;
 }
 
 @include tablet {

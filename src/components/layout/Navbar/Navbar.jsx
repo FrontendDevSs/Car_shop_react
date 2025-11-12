@@ -1,5 +1,5 @@
 import shopingCartIcon from "../../../assets/icons/shopingCart.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import menuIcon from "../../../assets/icons/menu.png";
 import { useState } from "react";
 import closeIcon from "../../../assets/icons/close.png";
@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <nav>
       <h1>CAR SHOP</h1>
-      <ul >
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>

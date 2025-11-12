@@ -1,36 +1,41 @@
 import "./shop.scss";
-import WhyChoseUs from "../../components/layout/WhyChooseUs/WhyChooseUs"
-import Newsletter from "../../components/layout/Newsletter/Newsletter"
+import WhyChoseUs from "../../components/layout/WhyChooseUs/WhyChooseUs";
+import Newsletter from "../../components/layout/Newsletter/Newsletter";
 
 import { BACKEND_URL } from "../../config";
 import useFetch from "../../hooks/useFetch";
 import Card from "../../components/ui/card/Card";
+import FadeInSection from "../../components/animations/FadeInSection";
 
 function Shop() {
-    const { data, loading, error } = useFetch(BACKEND_URL);
-    const cars = Array.isArray(data) ? data : data?.cars ?? [];
-    const shopCars = cars.slice(0, 12);
+  const { data, loading, error } = useFetch(BACKEND_URL);
+  const cars = Array.isArray(data) ? data : data?.cars ?? [];
+  const shopCars = cars.slice(0, 12);
 
-    return (
-        <section className="shop">
-            <div className="shop-div">
-                <h1 className="shop-title">Explore our offer</h1>
+  return (
+    <section className="shop">
+      <div className="shop-div">
+        <h1 className="shop-title">Explore our offer</h1>
 
-                {loading && <p className="shop-status">Loading…</p>}
-                {error && <p className="shop-error">Failed to load.</p>}
+        {loading && <p className="shop-status">Loading…</p>}
+        {error && <p className="shop-error">Failed to load.</p>}
 
-                {!loading && !error && (
-                    <div className="shop-grid">
-                        {shopCars.map((car) => (
-                            <Card key={car._id ?? car.id} car={car} />
-                        ))}
-                    </div>
-                )}
-            </div>
-            <WhyChoseUs />
-            <Newsletter />
-        </section>
-    );
+        {!loading && !error && (
+          <div className="shop-grid">
+            {shopCars.map((car, index) => (
+              <FadeInSection key={car._id ?? car.id} delay={index * 0.1}>
+                <Card car={car} />
+              </FadeInSection>
+            ))}
+          </div>
+        )}
+      </div>
+      <FadeInSection direction="up" once={false}>
+        <WhyChoseUs />
+      </FadeInSection>
+      <Newsletter />
+    </section>
+  );
 }
 
 export default Shop;

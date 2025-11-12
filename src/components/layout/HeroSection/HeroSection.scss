@@ -9,21 +9,22 @@
   text-align: center;
   background-color: $color-blue-light;
 
-  p {
+  .home-subtitle {
     margin-top: 115px;
   }
 
-  h1 {
+  .home-title {
     font-size: 6rem;
   }
 
-  .buttons {
+  .home-buttons {
     display: flex;
     gap: 10px;
     margin-top: 72px;
     margin-bottom: 30px;
   }
-  .button-primary {
+
+  .home-button-primary {
     @include btn($color-blue-medium, $color-white, 12px, $color-blue-medium);
     height: 60px;
     width: 160px;
@@ -34,7 +35,7 @@
     gap: 10px;
   }
 
-  .button-secondary {
+  .home-button-secondary {
     @include btn($color-white, $color-blue-medium, 12px);
     height: 60px;
     width: 160px;
@@ -46,24 +47,29 @@
     gap: 10px;
   }
 
-  .button-primary .btn-img,
-  .button-secondary .btn-img {
+  .home-btn-img {
     height: 18px;
     width: 18px;
+  }
+
+  .home-hero-img {
+    margin-top: 40px;
+    max-width: 100%;
+    height: auto;
   }
 }
 
 @include tablet {
   .home-container {
-    h1 {
+    .home-title {
       font-size: 4rem;
     }
 
-    p {
+    .home-subtitle {
       margin-top: 80px;
     }
 
-    .buttons {
+    .home-buttons {
       margin-top: 80px;
     }
   }
@@ -71,22 +77,22 @@
 
 @include mobile {
   .home-container {
-    h1 {
+    .home-title {
       font-size: 2.8125rem;
     }
 
-    p {
+    .home-subtitle {
       margin-top: 60px;
     }
 
-    .buttons {
+    .home-buttons {
       flex-direction: row;
       gap: 6px;
       margin-top: 36px;
     }
 
-    .button-primary,
-    .button-secondary {
+    .home-button-primary,
+    .home-button-secondary {
       width: 160px;
       height: 46px;
       margin-bottom: 50px;

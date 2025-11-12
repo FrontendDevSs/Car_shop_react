@@ -1,0 +1,121 @@
+@import "../../styles/reset";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/typography";
+@import "../../styles/buttons";
+
+.car-details {
+  max-width: 1440px;
+  margin-inline: auto;
+  margin-top: 90px;
+  margin-bottom: 150px;
+
+  .car-details-title {
+    font-size: 6rem;
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .car-details-card {
+    .car-details-link {
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .car-layout {
+      @include flex(center, space-between);
+      gap: 10%;
+      width: 100%;
+      margin-top: 64px;
+
+      .car-image {
+        flex: 0 1 50%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+        width: clamp(360px, 40vw, 800px);
+      }
+
+      .car-info {
+        flex: 0 1 40%;
+        @include flex(flex-start, center);
+        flex-direction: column;
+
+        .car-name {
+          font-size: 2.5rem;
+          line-height: 1.1;
+          font-weight: 700;
+          letter-spacing: 1.43px;
+          text-transform: uppercase;
+        }
+
+        .car-description {
+          line-height: 1.5;
+          font-weight: 500;
+          color: $color-gray-medium;
+          margin-top: 16px;
+          margin-bottom: 32px;
+        }
+
+        .car-specs {
+          margin-bottom: 4rem;
+
+          p {
+            line-height: 1.7;
+            font-weight: 500;
+
+            span {
+              color: $color-gray-medium;
+            }
+          }
+        }
+
+        .car-price {
+          font-size: 1.5rem;
+          line-height: 1;
+          letter-spacing: 1.29px;
+          font-weight: 700;
+          margin-bottom: 32px;
+        }
+
+        .car-actions {
+          @include flex(center);
+          gap: 20px;
+
+          .car-quantity {
+            @include flex(center, space-around);
+            gap: 25px;
+            background-color: $color-blue-light;
+            border-radius: 12px;
+            width: 160px;
+            padding: 20px;
+
+            .car-quantity-button {
+              cursor: pointer;
+              font-weight: 700;
+            }
+
+            p {
+              font-weight: 700;
+              line-height: 1;
+              letter-spacing: 1px;
+              width: 2ch;
+              text-align: center;
+            }
+          }
+
+          .car-to-cart {
+            cursor: pointer;
+            width: 160px;
+            padding: 20px;
+            line-height: 1;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
