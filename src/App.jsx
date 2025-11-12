@@ -1,3 +1,4 @@
+
 import Navbar from "./components/layout/Navbar/Navbar";
 import HomePage from "./pages/Home/HomePage";
 import Shop from "./pages/Shop/Shop";
@@ -5,75 +6,59 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart/Cart";
 import Footer from "./components/layout/Footer/Footer";
-import CarDetails from "./pages/CarDetails/CarDetails";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router";
-import { AnimatePresence } from "framer-motion";
-import PageWrapper from "./components/animations/PageWrapper";
+import SignUp from "./pages/SignUp/SignUp";
+import Login from "./pages/Login/Login";
 
-function AnimatedRoutes() {
-  const location = useLocation();
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
+
+function ProtectedRoute() {
+  const token = localStorage.getItem("token");
+  return token ? <Outlet /> : <Navigate to="/login" replace />;
+}
+
+function PublicRoute() {
+  const token = localStorage.getItem("token");
+  return !token ? <Outlet /> : <Navigate to="/" replace />;
+}
+
+
+function PublicLayout() {
+  return <Outlet />;
+}
+
+function ProtectedLayout() {
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <PageWrapper>
-              <HomePage />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/shop"
-          element={
-            <PageWrapper>
-              <Shop />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/shop/:id"
-          element={
-            <PageWrapper>
-              <CarDetails />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <PageWrapper>
-              <About />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <PageWrapper>
-              <Contact />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <PageWrapper>
-              <Cart />
-            </PageWrapper>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
   );
 }
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
+      <Routes>
+        <Route element={<PublicRoute />}>
+          <Route element={<PublicLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Route>
+        </Route>
+
+        <Route element={<ProtectedRoute />}>
+          <Route element={<ProtectedLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+          </Route>
+        </Route>
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </BrowserRouter>
   );
 }
